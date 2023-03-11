@@ -1,0 +1,33 @@
+﻿@model LoginViewModel
+
+<div class="row">
+    <div class="col">
+        <h1 class="display-4 text-center">Login Page</h1>
+        <hr />
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4 offset-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+      
+        <form method="post">
+            <div class="form-group mb-3">
+                <label class="form-label" asp-for="Username">Username</label>
+                <input type="text" class="form-control" placegolder="Username" asp-for="Username" />
+                <span asp-validation-for="Username" class="text-danger small"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label" asp-for="Password">Password</label>
+                <input type="password" class="form-control" placegolder="Password" asp-for="Password" />
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+            <div class="form-group text-center mb-3">
+                <button class="btn btn-primary " type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+            </div>
+
+        </form>
+    </div>
+</div>
